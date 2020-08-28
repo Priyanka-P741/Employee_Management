@@ -14,7 +14,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class DefaulterCheckoutPage implements OnInit {
 
-private _checkoutUrl ="https://emp-manage90.herokuapp.com/attendence/check-out"
+private _checkoutUrl =""
 
 //get items from localstorage items
 items:any = {};
