@@ -31,7 +31,7 @@ export class ProfilePage implements OnInit {
     hardware:string;
 
     token:string;
-//private _getUserUrl ="https://emp-manage90.herokuapp.com/api/profile/{{this.empId}}"
+//private _getUserUrl =""
   constructor(public alertController: AlertController,public storage:Storage,public httpClient:HttpClient,private router: Router) { }
   
   editcall(){
