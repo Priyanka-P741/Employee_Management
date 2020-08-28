@@ -10,7 +10,7 @@ import { HttpClient,HttpHeaders,HttpRequest} from '@angular/common/http';
 })
 export class RegisterPage implements OnInit {
 
-  private _registerUrl ="https://emp-manage90.herokuapp.com/api/employees"
+  private _registerUrl =""
   items:any ={};
   myForm: FormGroup;
 
