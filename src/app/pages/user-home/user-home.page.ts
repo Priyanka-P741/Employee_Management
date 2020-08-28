@@ -34,8 +34,8 @@ export class UserHomePage implements OnInit {
   latitude:number;
   longitude:number;
 
-  private _checkinUrl ="https://emp-manage90.herokuapp.com/attendence/check-in"
-  private _checkoutUrl ="https://emp-manage90.herokuapp.com/attendence/check-out"
+  private _checkinUrl =""
+  private _checkoutUrl =""
   //get items from localstorage items
   items:any = {};
   key:string ='items';
