@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
   m = this.d.getMinutes();
   t = "" + this.h + this.m;
   time= Number(this.t);
-  _loginUrl ="https://emp-manage90.herokuapp.com/api/login"
+  _loginUrl =""
     
 
   validation_messages = {
