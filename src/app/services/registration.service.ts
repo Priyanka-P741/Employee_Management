@@ -10,7 +10,7 @@ import { Storage } from '@ionic/storage';
 })
 export class RegistrationService {
 
-  private _registerUrl ="https://emp-manage90.herokuapp.com/api/employees"
+  private _registerUrl ="/employees"
 
 
   constructor(private _http:HttpClient,public storage: Storage) { }
