@@ -6,7 +6,7 @@ import { HttpClient,HttpParams,HttpHeaders } from '@angular/common/http';
 })
 export class LoginService {
 
-  private  _loginUrl ="https://emp-manage90.herokuapp.com/api/login"
+  private  _loginUrl ="/login"
 
   constructor(private httpClient:HttpClient) { }
 
