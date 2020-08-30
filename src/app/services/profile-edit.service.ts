@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
 })
 export class ProfileEditService {
 
-  private  _profileEditUrl ="https://emp-manage90.herokuapp.com/api/update"
+  private  _profileEditUrl ="/update"
   items:any = {};
   Key:string ="t";
   token:string;
