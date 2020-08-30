@@ -36,7 +36,7 @@ export class ForgotpasswordPage implements OnInit {
 myForm: FormGroup;
 passwordType: string ="password";
 passwordShown: boolean = false;
-_updatePasswordUrl ="https://emp-manage90.herokuapp.com/api/password-update"
+_updatePasswordUrl ="/password-update"
 
   constructor(public alertController: AlertController,public storage:Storage,public httpClient:HttpClient, private router: Router, private formsBuilder : FormBuilder) { }
 
