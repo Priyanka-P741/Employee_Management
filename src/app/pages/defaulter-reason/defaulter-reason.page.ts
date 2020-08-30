@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 })
 export class DefaulterReasonPage implements OnInit {
 
-  private _checkinUrl ="https://emp-manage90.herokuapp.com/attendence/check-in"
+  private _checkinUrl ="/check-in"
   //get items from localstorage items
   items:any = {};
   key:string ="items";
