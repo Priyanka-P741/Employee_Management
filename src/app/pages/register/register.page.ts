@@ -12,7 +12,7 @@ import { RegistrationService } from 'src/app/services/registration.service';
 })
 export class RegisterPage implements OnInit {
 
-  private _registerUrl ="https://emp-manage90.herokuapp.com/api/employees"
+  private _registerUrl ="/employees"
   items:any ={};
   myForm: FormGroup;
 
