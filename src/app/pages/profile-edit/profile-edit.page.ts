@@ -33,7 +33,7 @@ export class ProfileEditPage implements OnInit {
     token:string;
 
   
-  private  _profileEditUrl ="https://emp-manage90.herokuapp.com/api/update"
+  private  _profileEditUrl ="/update"
     
 myForm: FormGroup;
 
