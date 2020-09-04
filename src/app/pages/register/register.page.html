@@ -1,131 +1,133 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home" color="warning"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">Register</ion-title>
+    <ion-title >Register</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <!--required pattern="^\d{10}$"-->
 
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <ion-item lines="full">
-      <ion-icon name="person-outline"></ion-icon>&nbsp;
-      <ion-label position="inline">Name</ion-label>
-      <ion-input autocomplete="off" type="text" formControlName="name"></ion-input>
-    </ion-item>
-    <div>
-      <ng-container *ngFor="let validation of validation_messages.name">
-       <div *ngIf="myForm.get('name').hasError(validation.type) && myForm.get('name').touched">
-        <p>**{{validation.message}}</p>
-      </div>
-      </ng-container>
-    </div>
-    <br>
+      <ion-buttons slot="start">
+        <ion-back-button color="light" defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    
+    <div style=" margin-left:10px; margin-right:10px;">
+      
+       <h2 style="margin-left:25%; margin-bottom:20px; color:white; font: 1.5em sans-serif;;" >REGISTRATION</h2>  
+    
 
-    <ion-item lines="full">
-      <ion-icon name="mail-outline"></ion-icon>&nbsp;
-      <ion-label position="inline">Personal Email</ion-label>
-      <ion-input autocomplete="off" type="email" formControlName="email"></ion-input>
+      <ion-item class="item" lines="none" style="border-radius: 40px;"> 
+        <ion-icon size="small" name="person-outline"></ion-icon>&nbsp; 
+        <ion-label position="inline">Name</ion-label>
+       <ion-input autocomplete="off" type="text" formControlName="name" >
+       </ion-input>
+       <ng-container  *ngFor="let validation of validation_messages.name">
+        <div *ngIf="myForm.get('name').hasError(validation.type) && myForm.get('name').touched">
+         <small>**{{validation.message}}</small>
+       </div>
+       </ng-container>
+      
     </ion-item>
-    <div>
+    
+  
+
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="mail-outline"></ion-icon>&nbsp;
+      <ion-label position="inline">Personal Email</ion-label>
+      <ion-input autocomplete="off" type="email" formControlName="email">
+      </ion-input>
+  
       <ng-container *ngFor="let validation of validation_messages.email">
         <div *ngIf="myForm.get('email').hasError(validation.type) && myForm.get('email').touched">
-          <p>**{{validation.message}}</p>
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
+    </ion-item>
+    
 
-    <ion-item lines="full">
-      <ion-icon name="calendar-outline"></ion-icon>&nbsp;
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="calendar-outline"></ion-icon>&nbsp;
       <ion-label position="inline">Date of Birth</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY" formControlName="dob" min="1990-01-01" max="2020-01-01"></ion-datetime>
-    </ion-item>
-    <div>
       <ng-container *ngFor="let validation of validation_messages.dob">
         <div *ngIf="myForm.get('dob').hasError(validation.type) && myForm.get('dob').touched">
-          <p>**{{validation.message}}</p>
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
-
-    <ion-item lines="full">
-      <ion-icon name="image-outline"></ion-icon>&nbsp;
-      <ion-label position="inline">Profile Picture</ion-label>
-      <ion-input type="file" accept="image/*" formControlName="profile_pic"></ion-input>
     </ion-item>
     <div>
-      <ng-container *ngFor="let validation of validation_messages.profile_pic">
-        <div *ngIf="myForm.get('profile_pic').hasError(validation.type) && myForm.get('profile_pic').touched">
-          <p>**{{validation.message}}</p>
+      
+    </div>
+    
+
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size='small' name="image-outline"></ion-icon>&nbsp;
+      <ion-label position="inline">Profile Picture</ion-label>
+      <ion-input type="file" (change)="onFileSelected($event)" accept="image/*" formControlName="image"></ion-input>
+      <ng-container *ngFor="let validation of validation_messages.image">
+        <div *ngIf="myForm.get('image').hasError(validation.type) && myForm.get('image').touched">
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
+    </ion-item>
+    
 
-    <ion-item lines="full">
-      <ion-icon name="business-outline"></ion-icon>&nbsp;
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="business-outline"></ion-icon>&nbsp;
       <ion-label position="inline">Address</ion-label>
       <ion-input autocomplete="off" type="text" formControlName="address"></ion-input>
-    </ion-item>
-    <div>
       <ng-container *ngFor="let validation of validation_messages.address">
         <div *ngIf="myForm.get('address').hasError(validation.type) && myForm.get('address').touched">
-          <p>**{{validation.message}}</p>
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
+    </ion-item>
 
-    <ion-item lines="full">
-      <ion-icon name="person-sharp"></ion-icon>&nbsp;
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="person-sharp"></ion-icon>&nbsp;
       <ion-label position="inline">Reporting Manager</ion-label>
       <ion-input autocomplete="off" type="text" formControlName="manager"></ion-input>
-    </ion-item>
-    <div>
       <ng-container *ngFor="let validation of validation_messages.manager">
         <div *ngIf="myForm.get('manager').hasError(validation.type) && myForm.get('manager').touched">
-          <p>**{{validation.message}}</p>
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
+    </ion-item>
 
-    <ion-item lines="full">
-      <ion-icon name="call-outline"></ion-icon>&nbsp;
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="call-outline"></ion-icon>&nbsp;
       <ion-label position="inline">Mobile Number</ion-label>
       <ion-input autocomplete="off" type="number" formControlName="phone_no"></ion-input>
-    </ion-item>
-    <div>
       <ng-container *ngFor="let validation of validation_messages.phone_no">
         <div *ngIf="myForm.get('phone_no').hasError(validation.type) && myForm.get('phone_no').touched">
-          <p>**{{validation.message}}</p>
+          <small>**{{validation.message}}</small>
         </div>
       </ng-container>
-    </div>
-    <br>
+    </ion-item>
     
-      <ion-item lines="full">
-        <ion-icon name="desktop-sharp"></ion-icon>&nbsp;
+    
+    <ion-item class="item" lines="none" style="border-radius: 40px;">  
+      <ion-icon size="small" name="desktop-sharp"></ion-icon>&nbsp;
         <ion-label position="inline">  Device Id</ion-label>
         <ion-input autocomplete="off" type="text"  formControlName="device_id" ></ion-input>
-        </ion-item>
+        <ng-container *ngFor="let validation of validation_messages.device_id">
+          <div *ngIf="myForm.get('device_id').hasError(validation.type) && myForm.get('device_id').touched">
+            <small class="text-danger">**{{validation.message}}</small>
+          </div>
+        </ng-container>
+      </ion-item>
   
-        <div>
-          <ng-container *ngFor="let validation of validation_messages.device_id">
-            <div *ngIf="myForm.get('device_id').hasError(validation.type) && myForm.get('device_id').touched">
-              <small class="text-danger">**{{validation.message}}</small>
-            </div>
-          </ng-container>
-        </div>
+      </div>
     <ion-row>
-      <ion-col>
-        <ion-button fill="outline" shape="round" [disabled]="!myForm.valid" type="submit" expand="block" (click)="sendPostRequest()">Sign Up</ion-button>
+      <ion-col></ion-col>
+      <ion-col >
+        <ion-button  shape="round" [disabled]="!myForm.valid" type="submit" (click)="sendPostRequest()">Sign Up</ion-button>
       </ion-col>
+      <ion-col></ion-col>
     </ion-row>
   </form>
 </ion-content>
