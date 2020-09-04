@@ -1,19 +1,24 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">Reason Box</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-    <ion-item>
+
+    <div class="total" >
+      <h2 class="heading"  >Reason Box</h2>  
+
+    <ion-item lines="none">
   <ion-label position="floating" required>
-    Please fill your reason for Checking out early...
+    Please fill your reason for Checking out early.
   </ion-label>
   <br>
-  <ion-textarea formControlName="reason" name="reason" auto-grow ></ion-textarea>
+  <ion-input formControlName="earlyOutReason" name="earlyOutReason" auto-grow ></ion-input>
 </ion-item>
-<ion-button fill="outline" shape="round" color="danger" [disabled]="!myForm.valid"  (click)="sendPutRequest()"  type="submit" expand="block">Submit</ion-button>
+<ion-button shape="round" color="danger" [disabled]="!myForm.valid"  (click)="sendPutRequest()"  type="submit" expand="block">Submit</ion-button>
+</div>
 </form>
 </ion-content>
 
