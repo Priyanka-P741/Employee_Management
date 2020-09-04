@@ -1,31 +1,46 @@
 ion-content {
     // --background: url(src/assets/img/RegPage.png) no-repeat top center/cover fixed, #fff;
+    --background: url(../../../theme/1599121471486.JPEG) no-repeat 0 0/100% 100% ;
+  //  --bg-color:rgb(209, 81, 81);
     position: relative;
     height: auto;
     width: 100%;
+    // filter: blur(5px);
+}
+.item {
+  color:whitesmoke;
+  // border-top-left-radius: 40%;
+  // border-bottom-right-radius: 40%;
+  border-radius: 50px;
+  // --border-color: rgb(245, 190, 71);
+  --border-width: 2px;
+  --background: rgba(194, 158, 116, 0.459);
+margin-top: 5px;
+
 }
 
 
 .custom-icon {
-    font-size: 30px;
-    color : "warning";
+    font-size: 15px;
+    color: whitesmoke;
+    
   }
   
-.bottom_pos {
-  position: fixed;
-  left: 0;
-  bottom: 20px;
-  right: 0;
-}
+// .bottom_pos {
+//   position: fixed;
+//   left: 0;
+//   bottom: 30px;
+//   right: 0;
+// }
     
-p{
-    color:red;
+
+small{
+  color:red;
+  
 }
   
-ion-toolbar{
-  --background: rgb(56, 128, 255);
-}
-ion-title{
-    --color	:white;
+
+ion-input.placeholder{
+    --color	:rgb(250, 244, 244);
   }
   
