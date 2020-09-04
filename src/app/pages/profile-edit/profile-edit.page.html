@@ -1,16 +1,21 @@
-<ion-header translucent no-border>
+<!-- <ion-header translucent no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">
+    <ion-title>
       Edit Profile&nbsp;</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
 <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
-  <div class="ion-padding">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="login">Back</ion-back-button>
+  </ion-buttons>
+  <div class="total" >
+    <h2 class="heading"  >Edit Profile</h2>  
+
     <ion-item>
       <ion-label position="inline">Emp Id :</ion-label>
       <ion-input [(ngModel)]="empId" formControlName="empId" type="text"></ion-input>
@@ -41,7 +46,7 @@
     </ion-item>
     <ion-item lines="full"> 
       <ion-label position="inline">Profile Picture :</ion-label>
-      <ion-input [(ngModel)]="profile_pic" formControlName="pic" type="file" accept="image/*"></ion-input>
+      <ion-input [(ngModel)]="image" (change)="onFileSelected($event)" formControlName="image" type="file" accept="image/*"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="inline">Address : </ion-label>
@@ -52,7 +57,13 @@
       <ion-input [(ngModel)]="phone_no" formControlName="phone_no" type="number"></ion-input>
     </ion-item>
 </div>
-<ion-button fill="outline" shape="round" type="submit" expand="block" (click)="sendPutRequest()">Save</ion-button>
+<ion-row>
+  <ion-col></ion-col>
+  <ion-col>
+<ion-button  shape="round" type="submit" (click)="sendPutRequest()">Save</ion-button>
+</ion-col>
+<ion-col></ion-col>
+</ion-row>
 </form>
 </ion-content>
 
