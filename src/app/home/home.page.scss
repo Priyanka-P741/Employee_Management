@@ -12,7 +12,7 @@
 }
 
 ion-content {
-  // --background: url(../../assets/img/empcover.png) no-repeat 0 0/100% 100% , #fff;
+   --background: url(../../theme/sky.jpg) no-repeat 0 0/100% 100% , #fff;
   --background-size: contain;
   position: relative;
   height: auto;
@@ -22,14 +22,23 @@ ion-content {
 .bottom_pos {
   position: fixed;
   left: 0;
-  bottom: 20px;
+  bottom: 80px;
   right: 0;
+  font: 1.2em sans-serif;
+
 }
 
-ion-toolbar{
---background: rgb(56, 128, 255);
-}
+// ion-toolbar{
+// --background: rgb(33, 21, 138);
+// }
 
-ion-title{
-  --color	:white;
+// ion-title{
+//   --color	:white;
+// }
+.heading{
+  margin-left:15%;
+  padding-top: 160px;
+   margin-bottom:50px;
+    color:rgb(24, 8, 82);
+     font: 1.5em sans-serif;
 }
