@@ -1,24 +1,40 @@
 ion-content {
-    // --background: url(src\assets\img\profile_edit.png) no-repeat top center/cover fixed, #fff;
+    --background: url(../../../theme/photo-1499610519775-f6180db76b5a.jpeg) no-repeat 0 0/100% 100% ;
     // --background :#dcdde8;
     position: relative;
     height: auto;
     width: 100%;
 }
 
-ion-toolbar {
-    // --background: transparent;
-    --background: rgb(56, 128, 255);
-    --color:white;
-}
+// ion-toolbar {
+//     // --background: transparent;
+//     --background: rgb(56, 128, 255);
+//     --color:white;
+// }
 
 ion-item{
     --background: transparent;
     color: darkblue;
+    --background: rgba(230, 217, 217, 0.29);
+    // --border-width: 1px;
+    margin-top: 1.5px;
+     border-radius: 40px;
+
 }
 
 .custom-icon {
     font-size: 30px;
     color :white;
   }
+
+  .total{
+    margin-left:10px;
+     margin-right:10px;
+  }
   
+  .heading{
+    margin-left:35%;
+     margin-bottom:5px; 
+     color:black;
+      font: 1.5em sans-serif;
+  }
