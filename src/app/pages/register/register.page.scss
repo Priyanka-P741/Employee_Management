@@ -1,18 +1,32 @@
 ion-content {
     // --background: url(src/assets/img/RegPage.png) no-repeat top center/cover fixed, #fff;
+    --background: url(../../../theme/1599121471486.JPEG)  no-repeat 0 0/100% 100% ;
+
     position: relative;
     height: auto;
     width: 100%;
 }
 
-p{
+small{
     color:red;
 }
   
-ion-toolbar{
-    --background: rgb(56, 128, 255);
-}
-ion-title{
-      --color	:white;
-    }
-    
+
+ 
+.item {
+    color:whitesmoke;
+    // border-top-left-radius: 40%;
+    // border-bottom-right-radius: 40%;
+    border-radius: 50px;
+    // --border-color: rgb(245, 190, 71);
+    --border-width: 1.5px;
+    --background: rgba(229, 189, 143, 0.459);
+    margin-top: 5px;
+  
+  }
+  ion-button{
+    text-align: center;
+    --border-color: rgb(10, 9, 70);
+    --border-width: 2px;
+
+  }
