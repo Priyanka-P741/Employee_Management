@@ -1,10 +1,9 @@
 <ion-header translucent no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color="warning"></ion-back-button>
+      <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">
-    <ion-icon name="happy-outline"></ion-icon>
+    <ion-title>
       My Profile&nbsp;</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="editcall()">
@@ -15,23 +14,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true" slot="fixed"  [scrollEvents]="true">
+<ion-content>
+<div>
+  
+  <img src="{{image}}" class="bg">
 
-  <ion-avatar class="avatar">
-    <img src="../../assets/img/EmpProfilePic.png" alt="">
-    <ion-chip>
-      <ion-label color="danger">EmpID :{{empId}}</ion-label>
-    </ion-chip>
-  </ion-avatar>
-<br>
-<div class="ion-padding">
-
-  <ion-item>
-    <ion-label>
-      Name : {{name}}
-    </ion-label>
-  </ion-item>
-  <ion-item>
+</div>
+<div class="main-cnt">
+  <img src="{{image}}" class="dp">
+  <h1 class="heading">{{name}}</h1>
+  <h3 class="heading">Employee ID : {{empId}}</h3>
+  <ion-list no-lines>
+    <ion-item>
       <ion-label>
         Personal Email : {{email}}
       </ion-label>
@@ -76,5 +70,8 @@
       Device Id : {{device_id}}
     </ion-label>
   </ion-item>
-  </div>
+  </ion-list>
+</div>
 </ion-content>
+
+
