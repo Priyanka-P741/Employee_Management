@@ -1,7 +1,23 @@
-  
-ion-toolbar{
-    --background: rgb(56, 128, 255);
-}
-ion-title{
-      --color	:white;
-    }
+ion-content {
+  // --background: url(src/assets/img/RegPage.png) no-repeat top center/cover fixed, #fff;
+  --background: url(../../../theme/1599063952683.JPEG) no-repeat 0 0/100% 100% ;
+
+  position: relative;
+  height: auto;
+  width: 100%;
+}  
+ion-item{
+  --background: rgba(238, 223, 223, 0.39);
+  --border-width: 1.5px;}
+
+  .total{
+    padding-top: 100px;
+     margin-left:45px;
+      margin-right:45px;
+  }
+  .heading{
+    margin-left:30%;
+     margin-bottom:50px;
+      color:black;
+       font: 1.5em sans-serif;
+  }
